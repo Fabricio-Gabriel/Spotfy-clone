@@ -8,6 +8,10 @@ const main = () => {
             <h2>Artistas Popolares</h2>
             <a href="/" className='item-list__link'>Mostrar tudo</a>
         </div>
+
+        <div className="single-item">
+            <img src="" alt="" className="single-item__image" />
+        </div>
     </div>
   </div>
   );
