@@ -10,7 +10,10 @@ const main = () => {
         </div>
 
         <div className="single-item">
-            <img src="" alt="" className="single-item__image" />
+            <img src="https://i.scdn.co/image/ab676161000051744dcd8a3bff84cd7703892cf4" alt="imgem Henrique & Juliano" className="single-item__image" />
+            <p>Henrique & Juliano</p>
+            <p>Artista</p>
+            
         </div>
     </div>
   </div>
