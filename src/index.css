@@ -139,6 +139,7 @@
   .single-item:hover {
     background-color: var(--green-900);
     text-decoration: none;
+    cursor: pointer;
   }
   
   .single-item:hover .single-item__icon {

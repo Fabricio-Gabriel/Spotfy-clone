@@ -2,24 +2,31 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 
-const SingleItem = () => {
+const SingleItem = (props) => {
+    const imageArtist = props.image; 
+    const nameArtist = props.name;
+    const musicNameArtist = props.artist || 'Artista';
+    const idArtist = props.id;
+    const idPath = props.idPath;
+
+
   return (
 
-    <div className="single-item">
+    <a href={`${idPath}/${idArtist}`} className="single-item">
         <div className="single-item__div-image-button">
             <div className="single-item__div-image">
-                <img src="https://i.scdn.co/image/ab676161000051744dcd8a3bff84cd7703892cf4" alt="imgem Henrique & Juliano" className="single-item__image" />
+                <img src={imageArtist} alt={`Imagem ${nameArtist}`} className="single-item__image" />
             </div>
                         
             <FontAwesomeIcon className="single-item__icon" icon={faCirclePlay} />
         </div>
         <div className="single-item__texts">
             <div className="single-item__2lines">
-                <p className='single-item__title'>Amo Noite E Dia - Live In Sao Paulo / 2010</p>
+                <p className='single-item__title'>{nameArtist}</p>
             </div>
-            <p className='single-item__type'>Artista</p>
+            <p className='single-item__type'>{musicNameArtist}</p>
         </div>
-    </div>
+    </a>
 
   );
 }
