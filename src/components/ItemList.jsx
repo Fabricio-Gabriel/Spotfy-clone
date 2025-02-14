@@ -1,5 +1,6 @@
 import React from 'react';
 import SingleItem from './SingleItem';
+import { Link } from 'react-router-dom';
 
 const Itemlist = ({ title, items, itemsArray, path, idPath }) => {
   
@@ -7,7 +8,7 @@ const Itemlist = ({ title, items, itemsArray, path, idPath }) => {
     <div className="item-list">
             <div className='item-list__header'>
                 <h2>{title} Populares</h2>
-                <a href={path} className='item-list__link'>Mostrar tudo</a>
+                <Link to={path} className='item-list__link'>Mostrar tudo</Link>
             </div>
     
             <div className="item-list__container">
@@ -18,32 +19,6 @@ const Itemlist = ({ title, items, itemsArray, path, idPath }) => {
                 (currentValue, index) => <SingleItem idPath={idPath} {...currentValue}/>
                 )
               }
-
-
-              {/* {items === 5 ? (
-                <>
-                  <SingleItem />
-                  <SingleItem /> 
-                  <SingleItem /> 
-                  <SingleItem /> 
-                  <SingleItem /> 
-                </>
-                ) : (
-                  <>
-                    <SingleItem />
-                    <SingleItem /> 
-                    <SingleItem /> 
-                    <SingleItem /> 
-                    <SingleItem /> 
-                    <SingleItem />
-                    <SingleItem /> 
-                    <SingleItem /> 
-                    <SingleItem /> 
-                    <SingleItem /> 
-                  </>
-                )
-                
-              } */}
               
             </div>
     </div>

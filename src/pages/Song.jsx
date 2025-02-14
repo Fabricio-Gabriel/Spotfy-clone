@@ -1,6 +1,6 @@
 import React from 'react'
 
-const App2 = () => {
+const Song = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const App2 = () => {
   )
 }
 
-export default App2
+export default Song

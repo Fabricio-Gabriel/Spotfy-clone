@@ -1,18 +1,19 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const SingleItem = (props) => {
     const imageArtist = props.image; 
     const nameArtist = props.name;
     const musicNameArtist = props.artist || 'Artista';
-    const idArtist = props.id;
+    const id = props.id;
     const idPath = props.idPath;
 
 
   return (
 
-    <a href={`${idPath}/${idArtist}`} className="single-item">
+    <Link to={`${idPath}/${id}`} className="single-item">
         <div className="single-item__div-image-button">
             <div className="single-item__div-image">
                 <img src={imageArtist} alt={`Imagem ${nameArtist}`} className="single-item__image" />
@@ -26,7 +27,7 @@ const SingleItem = (props) => {
             </div>
             <p className='single-item__type'>{musicNameArtist}</p>
         </div>
-    </a>
+    </Link>
 
   );
 }
