@@ -8,7 +8,9 @@ const client =  new MongoClient(URL);
 
 // MANIPULANDO BD
 const db = client.db("spotfy-clone");
-const songsCollection = db.collection("songs").find({});
+// const songsCollection =  await db.collection("songs").find({}).toArray();
 
-console.log(db);
+// console.log(songsCollection);
+
+export default db;
 
